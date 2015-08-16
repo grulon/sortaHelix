@@ -4,16 +4,23 @@
   var stop_button = document.getElementById('stop_button');
   var reset_button=document.getElementById('reset_button');
   var count_field = document.getElementById('rect_qty');
+  var rect_width = document.getElementById('rect_width');
+  var rect_height = document.getElementById('rect_height');
   var x=0, y=0, width = myCanvas.width, height = myCanvas.height;
   var offset = 0;
   var interval;
+  var grd = context.createLinearGradient(0,0,width,height);
+  grd.addColorStop(0,"red");
+  grd.addColorStop(.5,"orange");
+  grd.addColorStop(1,"blue");
+  context.fillStyle = grd;
+  //context.fillRect(10,10,width,height);
 
   function drawManyRectangles(){
     // debugger;  //used debugger to see what 'this' keyword returned ... fyi it was animate_button
-  	//var n = f.value;
-  	width = 40;
-  	height = 20;
-
+  	context.fillRect(0,0,width,height);
+    width = rect_width.value;
+  	height = rect_height.value;
 
     var redraw = function(){
       clear();
