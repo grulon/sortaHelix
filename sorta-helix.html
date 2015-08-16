@@ -13,23 +13,27 @@
         <div class="form-group">
           <label for="n">Rectangle count</label>
           <input id="rect_qty" class="form-control" type="text" name="n"
-              value="20" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+              value="20">
         </div>
         <div class="form-group">
             <label for="w">Rectangle width</label>
-            <input id="rect_width" class="form-control" type="text" name="n"
-                value="20" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+            <input id="rect_width" class="form-control" type="text" name="w"
+                value="20">
+            <!--    onkeypress='return event.charCode >= 48 && event.charCode <= 57'> -->
           </div>
 
             <div class="form-group">
               <label for="h">Rectangle height</label>
-              <input id="rect_height" class="form-control" type="text" name="n"
-                  value="30" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+              <input id="rect_height" class="form-control" type="text" name="h"
+                  value="30">
             </div>
 
-        <button id="animate_button" class="btn btn-success" type="button">Animate!</button>
-        <button id="stop_button" class="btn btn-danger" type="button">Stop!</button>
-        <button id="reset_button" class="btn btn-default" type="button">Reset</button>
+        <button name="animate" class="btn btn-success" type="submit">Animate!</button>
+
+        <button name="stop" class="btn btn-danger" type="button">Stop!</button>
+
+        <button name="reset" class="btn btn-default" type="button">Reset</button>
+
       </form>
     </div>
 
